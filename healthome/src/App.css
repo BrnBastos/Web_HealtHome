@@ -1,13 +1,18 @@
 * {
-  margin: 0px;
-  border: 0px;
+  margin: 0;
+  border: 0;
 }
 
 header {
   background-color: rgb(248, 248, 248);
   width: 100%;
-  height: 120px;
   border-bottom: 2px solid rgb(175, 175, 175);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .tituloHeader {
@@ -16,14 +21,33 @@ header {
   font-size: 50px;
   color: white;
   height: 100%;
-  display: flex;
+  display: inline-flex;
   justify-content: left;
-  align-items: center;
+  text-align: left;
+  width: 30%;
+  cursor: pointer;
+  align-items: left;
   padding-left: 20px;
   text-shadow: 2px 0 rgb(0, 0, 0), -2px 0 rgb(0, 0, 0), 0 2px rgb(0, 0, 0), 0 -2px rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px rgb(0, 0, 0), 1px -1px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
 }
 
 .navegacaoHeader {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;
+  justify-content: right;
+  text-align: center;
+  list-style: none;
+  width: 60%;
+}
+
+.liNav {
+  padding: 0px 30px;
+  font-size: 40px;
+  color: white;
+  display: inline-block;
+  -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+}
+.liNav:hover {
+  background-color: rgb(207, 207, 207);
+  border-radius: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

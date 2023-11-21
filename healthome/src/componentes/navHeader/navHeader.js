@@ -1,10 +1,10 @@
 function NavHeader(){
     return(
         <nav>
-            <ul class='navegacaoHeader'>
-                <li>Home</li>
-                <li>Quem Somos</li>
-                <li>Contato</li>
+            <ul className='navegacaoHeader'>
+                <li className='liNav'>Home</li>
+                <li className='liNav'>Quem Somos</li>
+                <li className='liNav'>Contato</li>
             </ul>
         </nav>
     );
