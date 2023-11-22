@@ -1,0 +1,52 @@
+{
+  "cadastros": [
+    {
+      "email": "bruno@email.com",
+      "nome": "Bruno",
+      "senha": "1234",
+      "id": "1"
+    },
+    {
+      "email": "mat@email.com",
+      "nome": "Matheus",
+      "senha": "1234",
+      "id": "2"
+    },
+    {
+      "email": "breno@email.com",
+      "nome": "breno",
+      "senha": "1234",
+      "id": "5rF4e8S"
+    },
+    {
+      "email": "breno@email.com",
+      "nome": "breno",
+      "senha": "1234",
+      "id": "NwwF99q"
+    },
+    {
+      "email": "brano@email.com",
+      "nome": "brano",
+      "senha": "1234",
+      "id": "mK5hIa1"
+    },
+    {
+      "email": "",
+      "nome": "",
+      "senha": "",
+      "id": "hdB3rMm"
+    },
+    {
+      "email": "hul@email.com",
+      "nome": "hul",
+      "senha": "1234",
+      "id": "ATC65ai"
+    },
+    {
+      "email": "matlucas@email.com",
+      "nome": "matlucas",
+      "senha": "1234",
+      "id": "W6yRdEm"
+    }
+  ]
+}
