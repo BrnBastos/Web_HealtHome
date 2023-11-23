@@ -41,13 +41,31 @@ header {
 
 .liNav {
   padding: 0px 30px;
-  font-size: 40px;
-  color: white;
+  font-size: 25px;
+  color: darkred;
   display: inline-block;
-  -webkit-text-stroke: 0.8px rgb(0, 0, 0);
+  font-weight: 600;
 }
 .liNav:hover {
   background-color: rgb(207, 207, 207);
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.liNavOut {
+  padding-left: 200px;
+  font-size: 30px;
+}
+
+.btnOut {
+  background-color: darkred;
+  color: antiquewhite;
+  border-radius: 5px;
+  height: 45px;
+  width: 70px;
+  font-size: 20px;
+}
+.btnOut:hover {
+  background-color: rgb(90, 1, 1);
   cursor: pointer;
 }/*# sourceMappingURL=App.css.map */
