@@ -12,7 +12,6 @@ header {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
 }
 
 .tituloHeader {
@@ -20,11 +19,9 @@ header {
   font-weight: 600;
   font-size: 50px;
   color: white;
-  height: 100%;
   display: inline-flex;
   justify-content: left;
   text-align: left;
-  width: 30%;
   cursor: pointer;
   align-items: left;
   padding-left: 20px;
@@ -33,18 +30,15 @@ header {
 
 .navegacaoHeader {
   display: flex;
-  justify-content: right;
-  text-align: center;
   list-style: none;
-  width: 60%;
+  padding-right: 40px;
 }
 
 .liNav {
-  padding: 0px 30px;
-  font-size: 40px;
-  color: white;
+  padding: 0px 40px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
   display: inline-block;
-  -webkit-text-stroke: 0.8px rgb(0, 0, 0);
 }
 .liNav:hover {
   background-color: rgb(207, 207, 207);
