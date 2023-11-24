@@ -67,4 +67,21 @@ nav {
 .btnOut:hover {
   background-color: rgb(90, 1, 1);
   cursor: pointer;
+}
+
+footer {
+  min-height: 80px;
+  align-items: center;
+  display: flex;
+  color: darkred;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  border-top: 2px solid rgb(175, 175, 175);
+}
+
+.textoJustificado2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: darkred;
 }/*# sourceMappingURL=App.css.map */

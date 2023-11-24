@@ -1,10 +1,12 @@
 
 function Footer(){
     return(
-        <header>
-            <p className="tituloHeader">healt<span style={{color:'red'}}>Home</span></p>
-            <NavHeader/>
-        </header>
+        <>
+        <hr></hr>
+        <footer>
+            <center><p className="footer-web">2023 healtHome@CopyRight - Todos os Direitos Reservados</p></center>
+        </footer>
+        </>
     );
 }
 
