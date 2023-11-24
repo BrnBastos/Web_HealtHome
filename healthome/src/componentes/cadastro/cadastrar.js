@@ -53,23 +53,27 @@ const Cadastrar = () => {
   const [email, setEmail] = useState('');
   const [nome, setNome] = useState('');
   const [senha, setSenha] = useState('');
-  const [cadastros, setCadastros] = useState([]);
+  const [erroCadastro, setErroCadastro] = useState('');
 
-  useEffect(() => {
-    const fetchCadastros = async () => {
-      try {
-        const response = await fetch('http://localhost:3001/cadastros');
-        const data = await response.json();
-        setCadastros(data.cadastros);
-      } catch (error) {
-        console.error('Erro ao carregar cadastros:', error.message);
-      }
-    };
-
-    fetchCadastros();
-  }, []);
+  const verificarEmailExistente = async (email) => {
+    try {
+      const response = await fetch(`http://localhost:3001/cadastros?email=${email}`);
+      const cadastros = await response.json();
+      return cadastros.length > 0;
+    } catch (error) {
+      console.error('Erro ao verificar email existente:', error.message);
+      return false;
+    }
+  };
 
   const handleSubmit = async () => {
+    // Verifica se o email já está cadastrado
+    const emailExistente = await verificarEmailExistente(email);
+    if (emailExistente) {
+      setErroCadastro('Email já cadastrado. Por favor, use outro.');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:3001/cadastros', {
         method: 'POST',
@@ -87,17 +91,10 @@ const Cadastrar = () => {
         throw new Error('Erro ao cadastrar usuário');
       }
   
-      const newCadastro = await response.json();
-      setCadastros((prevCadastros) => {
-        if (!Array.isArray(prevCadastros)) {
-          return [newCadastro];
-        }
-        return [...prevCadastros, newCadastro];
-      });
-  
       setEmail('');
       setNome('');
       setSenha('');
+      setErroCadastro('');
 
       // Redirecione para a tela de login após o cadastro bem-sucedido
       window.location.href = '/login';
@@ -127,6 +124,7 @@ const Cadastrar = () => {
         value={senha}
         onChange={(e) => setSenha(e.target.value)}
       />
+      {erroCadastro && <p style={{ color: 'red' }}>{erroCadastro}</p>}
       <Button onClick={handleSubmit}>Cadastrar</Button>
       <LoginPageLink>
         Já tem uma conta? <Link to="/login">Faça login</Link>
@@ -136,4 +134,3 @@ const Cadastrar = () => {
 };
 
 export default Cadastrar;
-

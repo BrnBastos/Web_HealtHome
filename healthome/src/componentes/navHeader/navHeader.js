@@ -22,9 +22,9 @@ function NavHeader(){
         <nav>
             <ul className='navegacaoHeader'>
                 <StyledLink to="/Home"><li className='liNav'>Home</li></StyledLink>
-                <StyledLink to="/QuemSomos"><li className='liNav'>Quem Somos</li></StyledLink>
-                <StyledLink to="/Rotina"><li className='liNav'>Rotina</li></StyledLink>
                 <StyledLink to="/Habitos"><li className='liNav'>Hábitos</li></StyledLink>
+                <StyledLink to="/Rotina"><li className='liNav'>Rotina</li></StyledLink>
+                <StyledLink to="/QuemSomos"><li className='liNav'>Quem Somos</li></StyledLink>
                 <li className='liNavOut'><button onClick={Out} className="btnOut">Sair</button></li>
             </ul>
         </nav>
