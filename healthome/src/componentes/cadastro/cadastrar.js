@@ -23,11 +23,15 @@ const Input = styled.input`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: #ce1616;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #941111;
+  }
 `;
 
 const LoginPageLink = styled.div`
@@ -35,7 +39,7 @@ const LoginPageLink = styled.div`
   text-align: center;
 
   a {
-    color: #4caf50;
+    color: #ce1616;
     text-decoration: none;
     font-weight: bold;
 

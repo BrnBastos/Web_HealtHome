@@ -25,7 +25,7 @@ const StyledInput = styled.input`
 `;
 
 const StyledButton = styled.button`
-  background-color: #4caf50;
+  background-color: #ce1616;
   color: white;
   padding: 10px;
   border: none;
@@ -34,7 +34,22 @@ const StyledButton = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #45a049;
+    background-color: #941111;
+  }
+`;
+
+const LoginPageLink = styled.div`
+  margin-top: 10px;
+  text-align: center;
+
+  a {
+    color: #ce1616;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -71,9 +86,9 @@ const Login = () => {
         <StyledInput type="password" placeholder="Senha" value={senha} onChange={(e) => setSenha(e.target.value)} />
         <StyledButton onClick={handleLogin}>Login</StyledButton>
       </LoginForm>
-      <p>
+      <LoginPageLink>
         Não tem uma conta? <Link to="/cadastro">Cadastre-se</Link>
-      </p>
+      </LoginPageLink>
     </LoginContainer>
   );
 };

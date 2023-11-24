@@ -15,6 +15,10 @@ header {
   margin: 0 auto;
 }
 
+nav {
+  padding-right: 20px;
+}
+
 .tituloHeader {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 600;
@@ -36,7 +40,7 @@ header {
   justify-content: right;
   text-align: center;
   list-style: none;
-  width: 60%;
+  padding-right: 20px;
 }
 
 .liNav {
@@ -46,14 +50,9 @@ header {
   display: inline-block;
   font-weight: 600;
 }
-.liNav:hover {
-  background-color: rgb(207, 207, 207);
-  border-radius: 10px;
-  cursor: pointer;
-}
 
 .liNavOut {
-  padding-left: 200px;
+  padding: 0px 20px;
   font-size: 30px;
 }
 

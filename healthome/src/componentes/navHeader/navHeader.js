@@ -4,6 +4,11 @@ import styled from 'styled-components';
 const StyledLink = styled(Link)`
     text-decoration:none;
     color:inherit;
+    &:hover{
+        background-color: rgb(207, 207, 207);
+        border-radius: 10px;
+        cursor: pointer;
+    }
 `
 
 function NavHeader(){
@@ -16,9 +21,10 @@ function NavHeader(){
     return(
         <nav>
             <ul className='navegacaoHeader'>
-                <StyledLink to="/cadastro"><li className='liNav'>Home</li></StyledLink>
-                <StyledLink to="/cadastro"><li className='liNav'>Quem Somos</li></StyledLink>
-                <StyledLink to="/cadastro"><li className='liNav'>Contato</li></StyledLink>
+                <StyledLink to="/Home"><li className='liNav'>Home</li></StyledLink>
+                <StyledLink to="/QuemSomos"><li className='liNav'>Quem Somos</li></StyledLink>
+                <StyledLink to="/Rotina"><li className='liNav'>Rotina</li></StyledLink>
+                <StyledLink to="/Habitos"><li className='liNav'>Hábitos</li></StyledLink>
                 <li className='liNavOut'><button onClick={Out} className="btnOut">Sair</button></li>
             </ul>
         </nav>
