@@ -74,7 +74,7 @@ function Grafico(){
             {
                 label: 'Calorias',
                 data: [2000,2100,1900, 2050, 1930, 2010, caloriasLastValue],
-                backgroundColor: 'red',
+                backgroundColor: '#f93939',
                 borderColor: 'black',
                 borderWidth: 2,
                 borderRadius: 7,
@@ -82,7 +82,7 @@ function Grafico(){
             {
                 label: 'Proteínas',
                 data: [120,130,110, 115, 112, 130, proteinasLastValue],
-                backgroundColor: 'green',
+                backgroundColor: '#36ea64',
                 borderColor: 'black',
                 borderWidth: 2,
                 borderRadius: 7,
@@ -90,7 +90,7 @@ function Grafico(){
             {
                 label: 'Carboidratos',
                 data: [580,600,605, 603, 553, 579, carboidratosLastValue],
-                backgroundColor: 'blue',
+                backgroundColor: '#0becda',
                 borderColor: 'black',
                 borderWidth: 2,
                 borderRadius: 7,

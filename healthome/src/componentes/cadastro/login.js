@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useAuth } from '../AuthContext.js';
 
 const LoginContainer = styled.div`
   max-width: 400px;
@@ -57,6 +58,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth(); // Obtenha a função de login do contexto
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -66,9 +68,17 @@ const Login = () => {
       const cadastros = await response.json();
 
       if (cadastros.length > 0) {
-        console.log('Login bem-sucedido!', cadastros[0]);
+        const userData = {
+          nome: cadastros[0].nome,
+          email: cadastros[0].email,
+        };
 
-        // Redireciona para a tela Home (ou outra rota desejada após o login)
+        // Armazene os dados do usuário no contexto
+        login(userData);
+
+        console.log('Login bem-sucedido!', userData);
+
+        // Redirecione para a tela Home (ou outra rota desejada após o login)
         navigate('/home');
       } else {
         console.log('Credenciais inválidas');

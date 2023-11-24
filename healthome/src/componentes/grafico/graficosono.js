@@ -39,7 +39,7 @@ function GraficoSono(){
             {
                 label: 'Sono Leve (horas)',
                 data: [3,2,3, 4, 2, 1, 4],
-                backgroundColor: 'red',
+                backgroundColor: '#9839e3',
                 borderColor: 'black',
                 borderWidth: 2,
                 borderRadius: 7,
@@ -47,7 +47,7 @@ function GraficoSono(){
             {
                 label: 'Sono Pesado (horas)',
                 data: [4,5,3, 3, 5, 5, 1],
-                backgroundColor: 'blue',
+                backgroundColor: '#11bae1',
                 borderColor: 'black',
                 borderWidth: 2,
                 borderRadius: 7,

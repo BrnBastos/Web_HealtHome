@@ -123,14 +123,14 @@ const Label = styled.label`
 const AddButton1 = styled.button`
   padding: 5px 10px;
   font-size: 14px;
-  background-color: #18A4C3;
+  background-color: darkred;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 
   &:hover {
-    background-color: #137a8e;
+    background-color: rgb(90, 1, 1);
   }
 `;
 

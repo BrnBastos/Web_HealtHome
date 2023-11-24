@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import userImg from '../../Images/usericon.jpg'
+import { useAuth } from '../AuthContext';
 
 const PaddingContainer = styled.div`
 padding-right: 40px;
@@ -26,15 +27,22 @@ const UserImage = styled.img`
   margin-bottom: 10px;
 `;
 
-const UserInfo = () => (
+
+
+function UserInfo(){
+  
+  const { user } = useAuth();
+
+  return(
   <UserInfoContainer>
     <UserImage src={userImg} alt="User" />
     <div>
-      <strong>nome</strong>
+      <strong>{user ? user.nome : 'Usuário'}</strong> 
     </div>
-    <div>email</div>
+    <div>{user ? user.email : 'N/A'}</div>
   </UserInfoContainer>
-);
+  )
+  };
 
 const Aside = () => (
     <PaddingContainer>

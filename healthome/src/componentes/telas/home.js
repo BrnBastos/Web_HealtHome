@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Grafico from '../grafico/grafico';
 import GraficoSono from '../grafico/graficosono';
+import { useAuth } from '../AuthContext';
 
 const fadeIn = keyframes`
   from {
@@ -37,6 +38,7 @@ const ContainerBody = styled.div`
 function Home() {
     const [isVisibleTitulo, setIsVisibleTitulo] = useState(false);
     const [isVisibleBody, setIsVisibleBody] = useState(false);
+    const { user } = useAuth(); // Obtenha os dados do usuário do contexto
 
     useEffect(() => {
         const timeoutTitulo = setTimeout(() => {
@@ -55,7 +57,7 @@ function Home() {
 
     return (
         <FlexDiv>
-            <TituloBemVindo isVisible={isVisibleTitulo}>Bem vindo novamente,</TituloBemVindo>
+            <TituloBemVindo isVisible={isVisibleTitulo}>Bem vindo novamente,{user ? user.nome : 'Usuário'}</TituloBemVindo>
             <ContainerBody isVisible={isVisibleBody}>
                 <Grafico/>
                 <GraficoSono/>
